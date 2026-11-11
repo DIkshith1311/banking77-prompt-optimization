@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Classify this customer-support ticket by its primary banking intent.\n\nChoose one intent code from this list:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nReturn exactly one capital letter from A to L.\n\nExamples:\nTicket: my payment was rejected, do you know why?\nIntent: E\nTicket: how many days processing new card?\nIntent: D\nTicket: I was charged twice for an in-store purchase that I thought was declined.  My App says that it's still pending for one of the payments. Please make sure one of the charges is removed.\nIntent: H\nTicket: I was double-charged for a transaction\nIntent: H\nTicket: I see an unauthorized withdraw.\nIntent: I\nTicket: Hello. I just noticed I was charged two times for a restaurant I visited this week. Can you reverse the additional charge?\nIntent: H"
+  },
+  {
+    "role": "user",
+    "content": "Ticket: \nIntent:"
+  }
+]

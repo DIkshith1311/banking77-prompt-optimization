@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the variable D is\nDecision guidance: Classify this customer-support ticket by its primary banking intent.",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "textgrad",
+  "model": "qwen2.5-0.5b-instruct-q5_k_m"
+}

@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card delivery estimate, choose B. Distinguish this from contactless not working (D).",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "adalflow",
+  "model": "qwen2.5-0.5b-instruct-q5_k_m"
+}

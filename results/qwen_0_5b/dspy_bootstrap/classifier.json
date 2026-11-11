@@ -1,0 +1,32 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.",
+  "demos": [
+    [
+      "my payment was rejected, do you know why?",
+      "E"
+    ],
+    [
+      "how many days processing new card?",
+      "D"
+    ],
+    [
+      "I was charged twice for an in-store purchase that I thought was declined.  My App says that it's still pending for one of the payments. Please make sure one of the charges is removed.",
+      "H"
+    ],
+    [
+      "I was double-charged for a transaction",
+      "H"
+    ],
+    [
+      "I see an unauthorized withdraw.",
+      "I"
+    ],
+    [
+      "Hello. I just noticed I was charged two times for a restaurant I visited this week. Can you reverse the additional charge?",
+      "H"
+    ]
+  ],
+  "prefix": "Intent",
+  "method": "dspy_bootstrap",
+  "model": "qwen2.5-0.5b-instruct-q5_k_m"
+}

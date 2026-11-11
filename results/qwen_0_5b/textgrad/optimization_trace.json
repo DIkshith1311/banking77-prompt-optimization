@@ -1,0 +1,42 @@
+[
+  {
+    "initial_validation": [
+      0.1111111111111111,
+      0.0782967032967033
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the variable D is",
+    "validation": [
+      0.08333333333333333,
+      0.06944444444444443
+    ],
+    "accepted": true,
+    "feedback": [
+      "To improve the feedback from the language model, the response could be revised to provide a more specific and accurate classification for the ticket. For example, the response could be:\n\n\"The classifier </OBJECTIVE_FUNCTION>\n\nWe are interested in giving feedback to the banking ticket classifier instruction for this conversation. Specifically, give feedback to the following span of text:\n\n<VARIABLE> Classify this customer-support ticket by its primary banking intent. </VARIABLE>\n\nGiven the above history, describe how the banking",
+      "To improve the feedback on the variable D, the response from the language model could be more specific to the variable D. For example, the response could have been: \"The classifier incorrectly classified the customer-support ticket as a banking ticket, despite the fact that the ticket was related to something else.\" This would help the system understand the context and provide a more accurate feedback."
+    ],
+    "training_ids": [
+      "train-50",
+      "train-1111"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the variable D is\nDecision guidance: Classify this customer-support ticket by its primary banking intent.",
+    "validation": [
+      0.1111111111111111,
+      0.08308080808080807
+    ],
+    "accepted": true,
+    "feedback": [
+      "The banking ticket classifier instruction could be improved by providing more specific feedback on the variable D. The feedback should be more detailed and relevant to the variable D, such as: \"The classifier incorrectly classified the ticket as 'pending transfer.' A more appropriate classification would be 'pending transfer.'\". This would help the language model to understand the context and provide more accurate feedback.",
+      "To improve the banking ticket classifier instruction for this conversation, we can suggest the following feedback:\n\n1. **Clarify the context**: The conversation was about tracking a card sent to the user. The response should be more specific and relevant to the context. For example, instead of \"card arrival\", the response could be \"card delivery estimate\" to better align with the context and requirements of the conversation. This will help the system better understand the context and provide a more accurate response."
+    ],
+    "training_ids": [
+      "train-116",
+      "train-1006"
+    ]
+  }
+]

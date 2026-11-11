@@ -1,0 +1,42 @@
+[
+  {
+    "initial_validation": [
+      0.4722222222222222,
+      0.4263888888888889
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the ticket contains 'track', 'delivery', or 'status' in the context of a card, then route it to condition A (card arrival). Otherwise, continue with the existing conditions.",
+    "validation": [
+      0.2222222222222222,
+      0.2226190476190476
+    ],
+    "accepted": true,
+    "feedback": [
+      "To improve the banking ticket classifier instruction, consider adding more specific intents and detailed criteria for classification. For example, classify the ticket as \"Card Tracking\" if it mentions \"card sent\" or \"card delivery.\" Additionally, include a section for handling user inquiries about card status, such as \"card tracking,\" \"card delivery,\" or \"card status.\" This will ensure the classifier is more accurate and responsive to user needs.\n\nMoreover, incorporate a feature to suggest follow-up actions or next",
+      "To improve the banking ticket classifier instruction, consider refining the criteria for classifying customer-support tickets. Specifically, emphasize the importance of accurately matching the customer's inquiry with the most relevant banking intent. For instance, the instruction could be updated to include examples of common banking intents and how they should be categorized, such as \"card processing issues,\" \"card delivery,\" and \"contactless transactions.\" This would help ensure that the language model is consistently providing accurate and relevant responses. Additionally, provide"
+    ],
+    "training_ids": [
+      "train-50",
+      "train-1786"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the ticket contains 'track', 'delivery', or 'status' in the context of a card, then route it to condition A (card arrival). Otherwise, continue with the existing conditions.\nDecision guidance: If the ticket contains the phrase 'payment not working', 'not recognised', 'declined', 'pending', or 'charge twice' in the context of a card, then route it to condition G (card payment not recognised). Otherwise, continue with the existing conditions.",
+    "validation": [
+      0.3611111111111111,
+      0.33888888888888885
+    ],
+    "accepted": true,
+    "feedback": [
+      "To improve the banking ticket classifier instruction, consider adding more specific examples of conditions that would trigger condition A (card arrival) and those that would continue with existing conditions. This will help the classifier understand the nuances and ensure more accurate classifications. Additionally, incorporating a brief explanation for each condition can further clarify the reasoning behind the classification, making it more actionable and understandable.\n\nFor instance, you could modify the instruction to include:\n- Condition A (card arrival): \"If the ticket mentions '",
+      "To improve the banking ticket classifier instruction, consider incorporating more nuanced language that guides users to specific actions based on the content of the ticket. For instance, if the ticket mentions issues with card payment, the classifier could route it to condition A (card arrival) and provide more specific advice such as checking the card's balance, contacting the card issuer, or verifying the card's PIN. Additionally, adding a link to the card issuer's customer support page could be beneficial, as it would"
+    ],
+    "training_ids": [
+      "train-5890",
+      "train-5153"
+    ]
+  }
+]

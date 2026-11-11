@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).\nDecision guidance: For tickets about card payment not recognised, choose G. Distinguish this from card not working (C).",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "adalflow",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

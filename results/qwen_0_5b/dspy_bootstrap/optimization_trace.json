@@ -1,0 +1,6 @@
+[
+  {
+    "algorithm": "BootstrapFewShot",
+    "demonstration_budget": 6
+  }
+]

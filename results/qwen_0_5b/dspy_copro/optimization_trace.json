@@ -1,0 +1,33 @@
+[
+  {
+    "algorithm": "COPRO",
+    "breadth": 3,
+    "depth": 2,
+    "candidates": [
+      {
+        "instruction": "classify the customer support ticket by its primary banking intent",
+        "validation_accuracy_percent": 13.89,
+        "prefix": "Intent",
+        "depth": 0
+      },
+      {
+        "instruction": "Classify this customer-support ticket by its primary banking intent.",
+        "validation_accuracy_percent": 11.11,
+        "prefix": "Intent",
+        "depth": 0
+      },
+      {
+        "instruction": "Intent codebook: A. card arrival B. card delivery estimate C. card not working D. contactless not working E. declined card payment F. pending card payment G. card payment not recognised H. transaction charged twice I. cash withdrawal not recognised J. declined cash withdrawal K. pending transfer L. transfer not received by recipient",
+        "validation_accuracy_percent": 11.11,
+        "prefix": "Intent",
+        "depth": 1
+      },
+      {
+        "instruction": "Intent codebook: A. card arrival, B. card delivery estimate, C. card not working, D. contactless not working, E. declined card payment, F. pending card payment, G. card payment not recognised, H. transaction charged twice, I. cash withdrawal not recognised, J. declined cash withdrawal, K. pending transfer, L. transfer not received by recipient",
+        "validation_accuracy_percent": 11.11,
+        "prefix": "Intent",
+        "depth": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the ticket contains 'track', 'delivery', or 'status' in the context of a card, then route it to condition A (card arrival). Otherwise, continue with the existing conditions.\nDecision guidance: If the ticket contains the phrase 'payment not working', 'not recognised', 'declined', 'pending', or 'charge twice' in the context of a card, then route it to condition G (card payment not recognised). Otherwise, continue with the existing conditions.",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "textgrad",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

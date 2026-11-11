@@ -1,0 +1,120 @@
+{"id": "test-304", "ticket": "When will the card arrive?", "code": "B", "prediction": "A", "raw": "A", "prompt_tokens": 127}
+{"id": "test-1960", "ticket": "I got double charged for a payment so how do I fix that?", "code": "H", "prediction": "I", "raw": "I", "prompt_tokens": 135}
+{"id": "test-318", "ticket": "Can I make sure my card is delivered on a specific day?", "code": "B", "prediction": "C", "raw": "C", "prompt_tokens": 134}
+{"id": "test-843", "ticket": "I made a money transaction but the recipient can't see it", "code": "L", "prediction": "I", "raw": "I", "prompt_tokens": 134}
+{"id": "test-1606", "ticket": "Please help me to know the status of my card payment as its pending since a while.", "code": "F", "prediction": "INVALID", "raw": "P", "prompt_tokens": 139}
+{"id": "test-1851", "ticket": "How long can an EU transfer take?", "code": "K", "prediction": "E", "raw": "E", "prompt_tokens": 129}
+{"id": "test-874", "ticket": "How long does it take for transfers to finish?  I sent funds to my pal, and she says that she has not gotten anything.", "code": "L", "prediction": "L", "raw": "L", "prompt_tokens": 149}
+{"id": "test-1610", "ticket": "I made this payment days ago so why hasn't it gone through yet?", "code": "F", "prediction": "I", "raw": "I", "prompt_tokens": 136}
+{"id": "test-9", "ticket": "Is it normal to have to wait over a week for my new card?", "code": "A", "prediction": "A", "raw": "A", "prompt_tokens": 136}
+{"id": "test-1816", "ticket": "I have a card payment that was declined, but why?", "code": "E", "prediction": "D", "raw": "D", "prompt_tokens": 133}
+{"id": "test-305", "ticket": "Send my card as soon as you are able to.", "code": "B", "prediction": "E", "raw": "E", "prompt_tokens": 132}
+{"id": "test-1581", "ticket": "I attempted to get cash but was declined.", "code": "J", "prediction": "C", "raw": "C", "prompt_tokens": 130}
+{"id": "test-1967", "ticket": "I have a duplicate payment showing up on the app. How do I stop myself being charged for the thing twice?", "code": "H", "prediction": "I", "raw": "I", "prompt_tokens": 144}
+{"id": "test-365", "ticket": "My card won't work.", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 127}
+{"id": "test-1599", "ticket": "atm would not give me cash", "code": "J", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-1869", "ticket": "I made a transfer 12 hours ago. Why is it still listed as pending?", "code": "K", "prediction": "INVALID", "raw": "T.", "prompt_tokens": 139}
+{"id": "test-392", "ticket": "My card suddenly quit working.", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 127}
+{"id": "test-1823", "ticket": "My card was not accepted.", "code": "E", "prediction": "A", "raw": "A", "prompt_tokens": 127}
+{"id": "test-859", "ticket": "I sent money.  They haven't received it.", "code": "L", "prediction": "I", "raw": "I", "prompt_tokens": 132}
+{"id": "test-863", "ticket": "I transferred some money but the receiver can't pick it up for some reason.", "code": "L", "prediction": "L", "raw": "L", "prompt_tokens": 137}
+{"id": "test-1859", "ticket": "When will the transfer go through?", "code": "K", "prediction": "INVALID", "raw": "T.", "prompt_tokens": 128}
+{"id": "test-1879", "ticket": "How long does it take for a money transfer to show?", "code": "K", "prediction": "INVALID", "raw": "T.", "prompt_tokens": 133}
+{"id": "test-1601", "ticket": "Why is my payment pending?", "code": "F", "prediction": "INVALID", "raw": "P", "prompt_tokens": 127}
+{"id": "test-399", "ticket": "Could it be that I deactivated my card, its not working?", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 134}
+{"id": "test-1097", "ticket": "There is a card payment I do not recognise.", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 131}
+{"id": "test-1088", "ticket": "there is a transaction on my account that i didnt make", "code": "G", "prediction": "INVALID", "raw": "T", "prompt_tokens": 133}
+{"id": "test-1585", "ticket": "Why was my cash withdrawal declined?", "code": "J", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-584", "ticket": "I wanted to use my card contactless but it doesn't seem to be working, what could be the problem?", "code": "D", "prediction": "E", "raw": "E", "prompt_tokens": 144}
+{"id": "test-1620", "ticket": "Why is a payment showing up on my card as pending?", "code": "F", "prediction": "INVALID", "raw": "P.", "prompt_tokens": 133}
+{"id": "test-590", "ticket": "It didnt work when I tried to pay contactless at the bus today. Why?", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 138}
+{"id": "test-1972", "ticket": "It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct.", "code": "H", "prediction": "I", "raw": "I", "prompt_tokens": 146}
+{"id": "test-2756", "ticket": "There is a problem with my card. Somebody has removed money from my account in a town I haven't been to. Can you please freeze my account immediately?", "code": "I", "prediction": "C", "raw": "C", "prompt_tokens": 153}
+{"id": "test-381", "ticket": "Is my card broken?", "code": "C", "prediction": "B", "raw": "B", "prompt_tokens": 126}
+{"id": "test-1598", "ticket": "The cash I tried to draw from the ATM was not approved.", "code": "J", "prediction": "A", "raw": "A", "prompt_tokens": 134}
+{"id": "test-1963", "ticket": "I would like to know why I was charged twice for my purchase.", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 135}
+{"id": "test-1852", "ticket": "My transfer is still coming up as pending.", "code": "K", "prediction": "L", "raw": "L", "prompt_tokens": 130}
+{"id": "test-2753", "ticket": "I didn't take out money from an ATM but my app statement shows that I did. How can I fix this?", "code": "I", "prediction": "I", "raw": "I", "prompt_tokens": 145}
+{"id": "test-2739", "ticket": "It looks like someone else withdrew cash from my account, can you help?", "code": "I", "prediction": "C", "raw": "C", "prompt_tokens": 136}
+{"id": "test-1815", "ticket": "I'm really stuck. I don't know why but my card payment has not gone through.", "code": "E", "prediction": "I", "raw": "I", "prompt_tokens": 140}
+{"id": "test-21", "ticket": "Status of the card I ordered.", "code": "A", "prediction": "I", "raw": "I", "prompt_tokens": 128}
+{"id": "test-360", "ticket": "I've tried my card a bunch of times and it never worked.", "code": "C", "prediction": "I", "raw": "I", "prompt_tokens": 135}
+{"id": "test-1996", "ticket": "There is more than one of the same transaction on my account.", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 134}
+{"id": "test-280", "ticket": "I need my card now!", "code": "B", "prediction": "I", "raw": "I", "prompt_tokens": 127}
+{"id": "test-1991", "ticket": "I was double charged", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 126}
+{"id": "test-2735", "ticket": "i think someone is using my card to withdraw money. Someone stole my wallet. What can I do? it is urgent.", "code": "I", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 146}
+{"id": "test-7", "ticket": "i have not received my card", "code": "A", "prediction": "I", "raw": "I", "prompt_tokens": 128}
+{"id": "test-562", "ticket": "what is required documents for new card process ?", "code": "D", "prediction": "I", "raw": "I", "prompt_tokens": 130}
+{"id": "test-369", "ticket": "My card does not work", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 127}
+{"id": "test-1857", "ticket": "How long do transfer pend for?", "code": "K", "prediction": "INVALID", "raw": "T", "prompt_tokens": 128}
+{"id": "test-295", "ticket": "May I choose when it's delivered?", "code": "B", "prediction": "C", "raw": "C", "prompt_tokens": 129}
+{"id": "test-597", "ticket": "Do I need to make a regular payment before a contactless one?", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 135}
+{"id": "test-865", "ticket": "My friend still hasn't gotten a transaction I made.", "code": "L", "prediction": "INVALID", "raw": "T", "prompt_tokens": 132}
+{"id": "test-368", "ticket": "How do I unblock my card using the app?", "code": "C", "prediction": "A", "raw": "A", "prompt_tokens": 132}
+{"id": "test-1630", "ticket": "Why are my payments showing pending?", "code": "F", "prediction": "INVALID", "raw": "P", "prompt_tokens": 128}
+{"id": "test-1113", "ticket": "There's a recent charge on my card that I know I didn't make because I've never seen the name before. Can we investigate this?", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 150}
+{"id": "test-853", "ticket": "I just finished sending money, but it's not logging on the recipient side.", "code": "L", "prediction": "I", "raw": "I", "prompt_tokens": 137}
+{"id": "test-1822", "ticket": "Why is my debit card being declined when I have money?", "code": "E", "prediction": "D", "raw": "D", "prompt_tokens": 133}
+{"id": "test-1617", "ticket": "I would like to know why my purchases from this morning are still pending.", "code": "F", "prediction": "I", "raw": "I", "prompt_tokens": 136}
+{"id": "test-1580", "ticket": "My ATM transaction was unsuccessful.", "code": "J", "prediction": "I", "raw": "I", "prompt_tokens": 127}
+{"id": "test-857", "ticket": "I need to find out why my transfer didn't get there.", "code": "L", "prediction": "L", "raw": "L", "prompt_tokens": 134}
+{"id": "test-1625", "ticket": "My payment still hasn't processed!", "code": "F", "prediction": "I", "raw": "I", "prompt_tokens": 128}
+{"id": "test-36", "ticket": "I'm starting to think my card is lost because it still hasn't arrived, can you help?", "code": "A", "prediction": "I", "raw": "I", "prompt_tokens": 141}
+{"id": "test-1860", "ticket": "Please explain why the transfers shows up as pending?", "code": "K", "prediction": "E", "raw": "E", "prompt_tokens": 131}
+{"id": "test-1597", "ticket": "Is there a reason that the ATM declined my transaction?", "code": "J", "prediction": "D", "raw": "D", "prompt_tokens": 132}
+{"id": "test-375", "ticket": "Why isn't my card working?", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-2725", "ticket": "Why is there a random withdrawal in my app?", "code": "I", "prediction": "D", "raw": "D", "prompt_tokens": 131}
+{"id": "test-1964", "ticket": "I didn't buy this twice", "code": "H", "prediction": "I", "raw": "I", "prompt_tokens": 128}
+{"id": "test-873", "ticket": "When will my funds transfer?", "code": "L", "prediction": "INVALID", "raw": "T.", "prompt_tokens": 127}
+{"id": "test-1971", "ticket": "I have been charged twice", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 127}
+{"id": "test-2724", "ticket": "My app shows some cash I didn't get.", "code": "I", "prediction": "C", "raw": "C", "prompt_tokens": 131}
+{"id": "test-2754", "ticket": "Someone has stolen my card. Even though I have my card with me, someone just made a 500£ cash withdrawal. Please help as soon as possible.", "code": "I", "prediction": "INVALID", "raw": "T I", "prompt_tokens": 155}
+{"id": "test-1804", "ticket": "My payment has been declined, I thought this issue was fixed!", "code": "E", "prediction": "I", "raw": "I", "prompt_tokens": 134}
+{"id": "test-1080", "ticket": "I have a strange payment in my statement", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 130}
+{"id": "test-27", "ticket": "I'm still waiting for delivery of my new card, why is it taking so long?", "code": "A", "prediction": "D", "raw": "D", "prompt_tokens": 139}
+{"id": "test-1098", "ticket": "I don't recognise a card payment", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 129}
+{"id": "test-2737", "ticket": "My account has a weird withdrawal.", "code": "I", "prediction": "INVALID", "raw": "T", "prompt_tokens": 128}
+{"id": "test-564", "ticket": "How do I get the contactless feature to work for my card?", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 135}
+{"id": "test-397", "ticket": "Nothing goes through on my card.", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-1572", "ticket": "I tried to make a cash withdrawal and it was declined. Why did this happen?", "code": "J", "prediction": "I", "raw": "I", "prompt_tokens": 138}
+{"id": "test-583", "ticket": "The NFC payment wouldn't work on the bus today. Help?", "code": "D", "prediction": "INVALID", "raw": "N", "prompt_tokens": 134}
+{"id": "test-1846", "ticket": "I have a transfer that's pending and wanted to know how long it is going to take to process?", "code": "K", "prediction": "L", "raw": "L", "prompt_tokens": 142}
+{"id": "test-1110", "ticket": "I see a charge on my account that I don't recall making. I feel like my account may have been compromised.", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 145}
+{"id": "test-20", "ticket": "I did not get my card yet, is it lost?", "code": "A", "prediction": "L", "raw": "L", "prompt_tokens": 133}
+{"id": "test-1824", "ticket": "I have no idea why my card payment did not work.", "code": "E", "prediction": "I", "raw": "I", "prompt_tokens": 133}
+{"id": "test-35", "ticket": "I ordered a card and I still haven't received it. It's been two weeks. What can I do?", "code": "A", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 144}
+{"id": "test-2727", "ticket": "I didn't get cash from an ATM, but according to the app a transaction was made when i didn't make it.", "code": "I", "prediction": "I", "raw": "I", "prompt_tokens": 146}
+{"id": "test-563", "ticket": "I don't know what's wrong, my contactless stopped working. Tried it in a few different places today and it didn't work in any of them.", "code": "D", "prediction": "I", "raw": "I", "prompt_tokens": 153}
+{"id": "test-1082", "ticket": "I saw a payment i did not do", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 130}
+{"id": "test-1847", "ticket": "So the transfer finally worked but now it's been pending for quite a long time. How long do you expect me to wait for it? It's quite urgent", "code": "K", "prediction": "L", "raw": "L", "prompt_tokens": 154}
+{"id": "test-1832", "ticket": "Why has my card payment been declined?", "code": "E", "prediction": "C", "raw": "C", "prompt_tokens": 129}
+{"id": "test-287", "ticket": "I live in the US, how long will it take for delivery?", "code": "B", "prediction": "E", "raw": "E", "prompt_tokens": 135}
+{"id": "test-578", "ticket": "My contactless is not working", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-1850", "ticket": "How can I speed up a transfer?  Mine is pending.", "code": "K", "prediction": "L", "raw": "L", "prompt_tokens": 134}
+{"id": "test-575", "ticket": "What can I do if contactless doesn't work?", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 132}
+{"id": "test-1817", "ticket": "Do you know why my card payment did not work?", "code": "E", "prediction": "D", "raw": "D", "prompt_tokens": 132}
+{"id": "test-398", "ticket": "How do I find out why my card won't work?", "code": "C", "prediction": "C", "raw": "C", "prompt_tokens": 133}
+{"id": "test-1627", "ticket": "I have waited 15 days, but my payment still hasn't cleared.", "code": "F", "prediction": "I", "raw": "I", "prompt_tokens": 137}
+{"id": "test-1809", "ticket": "I was out today looking forward to pay with my new card, turns out the payment just kept getting declined. This is really sad, what's going on?", "code": "E", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 153}
+{"id": "test-2736", "ticket": "I am seeing in the App a some cash withdrawal that its not mine", "code": "I", "prediction": "I", "raw": "I", "prompt_tokens": 136}
+{"id": "test-1", "ticket": "I still have not received my new card, I ordered over a week ago.", "code": "A", "prediction": "I", "raw": "I", "prompt_tokens": 137}
+{"id": "test-1813", "ticket": "I know I have enough funds in my account but my card payment hasn't worked for some reason. What do I do?", "code": "E", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 146}
+{"id": "test-855", "ticket": "The receipient doesn't see my money transfer.", "code": "L", "prediction": "INVALID", "raw": "T.", "prompt_tokens": 131}
+{"id": "test-8", "ticket": "still waiting on that card", "code": "A", "prediction": "INVALID", "raw": "T", "prompt_tokens": 127}
+{"id": "test-1622", "ticket": "How long do card transactions take to clear?", "code": "F", "prediction": "C", "raw": "C", "prompt_tokens": 130}
+{"id": "test-290", "ticket": "Does delivery to the US take long?", "code": "B", "prediction": "D", "raw": "D", "prompt_tokens": 129}
+{"id": "test-293", "ticket": "What is the difference between standard and express delivery?", "code": "B", "prediction": "D", "raw": "D", "prompt_tokens": 131}
+{"id": "test-1981", "ticket": "Why am I being charged twice?", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 128}
+{"id": "test-1111", "ticket": "I know I didn't make this payment showing up on my card, I don't remember this person at all.", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 144}
+{"id": "test-312", "ticket": "I am waiting for my card to arrive.", "code": "B", "prediction": "A", "raw": "A", "prompt_tokens": 130}
+{"id": "test-1108", "ticket": "There is a payment in the App that is not mine.", "code": "G", "prediction": "I", "raw": "I", "prompt_tokens": 133}
+{"id": "test-580", "ticket": "For some reason my contactless won't work for me.", "code": "D", "prediction": "C", "raw": "C", "prompt_tokens": 133}
+{"id": "test-1609", "ticket": "When will my card payment be done pending?", "code": "F", "prediction": "INVALID", "raw": "P.", "prompt_tokens": 130}
+{"id": "test-1573", "ticket": "I can't get money out of the ATM", "code": "J", "prediction": "E", "raw": "E", "prompt_tokens": 131}
+{"id": "test-856", "ticket": "I transferred the rent payment for my new place a couple days ago but the landlord says it's not there yet, despite showing up as done on my side. I checked the account number I sent it to and it's definitely correct. Can you please verify if the transaction really went through or not?", "code": "L", "prediction": "I", "raw": "I", "prompt_tokens": 181}
+{"id": "test-1086", "ticket": "What should I do if I see a payment I didn't make?", "code": "G", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 135}
+{"id": "test-1577", "ticket": "Why was I declined at the ATM today when I was trying to make a withdraw?", "code": "J", "prediction": "INVALID", "raw": "I.", "prompt_tokens": 138}
+{"id": "test-1566", "ticket": "I was at the ATM trying to made a withdraw and I was declined.", "code": "J", "prediction": "I", "raw": "I", "prompt_tokens": 136}
+{"id": "test-311", "ticket": "When can I expect to receive my new card?", "code": "B", "prediction": "E", "raw": "E", "prompt_tokens": 131}
+{"id": "test-23", "ticket": "I ordered my card 2 weeks ago and it still isn't here? What do I do?", "code": "A", "prediction": "I", "raw": "I", "prompt_tokens": 141}
+{"id": "test-1975", "ticket": "I think something may have happened that caused a charge to show up twice.", "code": "H", "prediction": "C", "raw": "C", "prompt_tokens": 136}

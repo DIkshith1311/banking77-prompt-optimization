@@ -1,0 +1,7 @@
+{
+  "instruction": "classify the customer support ticket by its primary banking intent",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "dspy_copro",
+  "model": "qwen2.5-0.5b-instruct-q5_k_m"
+}

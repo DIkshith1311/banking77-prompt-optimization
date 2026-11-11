@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Classify this customer-support ticket by its primary banking intent.\n\nChoose one intent code from this list:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nReturn exactly one capital letter from A to L.\n\nExamples:\nTicket: How many business days should my replacement card take to arrive?\nIntent: B\nTicket: My plastic card has still not turned up after three weeks.\nIntent: A\nTicket: Tapping my card at the reader no longer works, but inserting it does.\nIntent: D\nTicket: There is an unfamiliar debit-card purchase on my statement.\nIntent: G\nTicket: The ATM said my attempt to take out cash was declined.\nIntent: J\nTicket: The transfer shows complete, but my landlord never got the money.\nIntent: L"
+  },
+  {
+    "role": "user",
+    "content": "Ticket: \nIntent:"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "initial_validation": [
+      0.1111111111111111,
+      0.0782967032967033
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card delivery estimate, choose B. Distinguish this from contactless not working (D).",
+    "validation": [
+      0.19444444444444445,
+      0.10587121212121213
+    ],
+    "accepted": true,
+    "feedback": "0. To improve the intent instruction, we can add a step to ensure the feedback is specific and detailed, explaining why the score is low and the difference between the expected correct response and the actual response. This will help the LLM output a more accurate and relevant response.\n1. To improve the intent instruction, we can add a step to explain the context and the specific feedback needed to guide the LLM_OUTPUT. This will help the LLM to focus on the correct response and avoid confusion.\n",
+    "candidate_rules": {
+      "1": "For tickets about card arrival, choose A. Distinguish this from card not working (C).",
+      "2": "For tickets about card delivery estimate, choose B. Distinguish this from contactless not working (D)."
+    },
+    "training_ids": [
+      "train-50",
+      "train-1111"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card delivery estimate, choose B. Distinguish this from contactless not working (D).\nDecision guidance: For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+    "validation": [
+      0.1388888888888889,
+      0.0849673202614379
+    ],
+    "accepted": false,
+    "feedback": "0. To improve the intent instruction, we can add a step to ensure the feedback is specific and detailed, explaining why the score is low and the difference between the expected correct response and the actual response. This will help the LLM output a more accurate and relevant response.\n1. To improve the intent instruction, we can add a step to ensure the feedback is specific and detailed, explaining why the score is low and the difference between the expected correct response and the actual response. This will help the LLM output a more accurate and relevant response.\n",
+    "candidate_rules": {
+      "1": "For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+      "2": "For tickets about card not working, choose C. Distinguish this from contactless not working (D)."
+    },
+    "training_ids": [
+      "train-116",
+      "train-1298"
+    ]
+  }
+]

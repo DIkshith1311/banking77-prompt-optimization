@@ -1,0 +1,44 @@
+[
+  {
+    "initial_validation": [
+      0.4444444444444444,
+      0.37777777777777777
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+    "validation": [
+      0.4722222222222222,
+      0.38389804639804637
+    ],
+    "accepted": true,
+    "feedback": "0. One concrete improvement to the Banking77 intent instruction is to specify that the feedback should also consider how the predecessor variables (e.g., \"Generator_ticket\") interact with the target variable (\"instruction\"). This could involve examining whether the predecessor variables are correctly mapping the customer's inquiry to the appropriate banking intent code. For instance, if the predecessor variable \"Generator_ticket\"\n1. One concrete improvement to the Banking77 intent instruction is to explicitly mention that the feedback should be directed at the predecessor variables that are used together with the target variable. For instance, the feedback should be provided to the predecessor variable \"instruction\" to guide it on how to better classify the customer-support ticket. This would ensure that the classification is more aligned with the\n",
+    "candidate_rules": {
+      "1": "For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+      "2": "For tickets about contactless not working, choose D. Distinguish this from card delivery estimate (B)."
+    },
+    "training_ids": [
+      "train-50",
+      "train-1786"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).\nDecision guidance: For tickets about card payment not recognised, choose G. Distinguish this from card not working (C).",
+    "validation": [
+      0.4722222222222222,
+      0.42353801169590644
+    ],
+    "accepted": true,
+    "feedback": "0. One concrete improvement could be to investigate whether the <TARGET_VARIABLE> (Generator_ticket) is correctly formatted or if it contains any irrelevant or unexpected data that could be causing the system error, given that the score is 0.0. Specifically, check if the output from the LLM is consistent with the expected input and the SYSTEM_QUESTION related to the payment processing\n1. One concrete improvement to the instruction is to specify that the feedback should focus on whether the Generator_output correctly maps to the expected correct response (gold), and highlight any discrepancies in the role and data types of C and G. This would help identify if the issue lies within the Generator's output or the evaluation function's comparison.\n",
+    "candidate_rules": {
+      "1": "For tickets about pending card payment, choose F. Distinguish this from declined card payment (E).",
+      "2": "For tickets about card payment not recognised, choose G. Distinguish this from card not working (C)."
+    },
+    "training_ids": [
+      "train-5153",
+      "train-3625"
+    ]
+  }
+]

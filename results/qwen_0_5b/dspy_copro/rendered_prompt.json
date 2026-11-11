@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "classify the customer support ticket by its primary banking intent\n\nChoose one intent code from this list:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nReturn exactly one capital letter from A to L."
+  },
+  {
+    "role": "user",
+    "content": "Ticket: \nIntent:"
+  }
+]
