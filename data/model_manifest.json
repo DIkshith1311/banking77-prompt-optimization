@@ -1,0 +1,14 @@
+{
+  "model": "qwen2.5-3b-instruct-q4_k_m",
+  "parameters": 3090000000,
+  "quantization": "Q4_K_M",
+  "source": "https://ollama.com/library/qwen2.5:3b",
+  "gguf_url": "https://registry.ollama.ai/v2/library/qwen2.5/blobs/sha256:5ee4f07cdb9beadbbb293e85803c569b01bd37ed059d2715faa7bb405f31caa6",
+  "gguf_size_bytes": 1929903008,
+  "gguf_sha256": "5ee4f07cdb9beadbbb293e85803c569b01bd37ed059d2715faa7bb405f31caa6",
+  "runtime": "llama.cpp b8200",
+  "device": "CPU",
+  "threads": 6,
+  "parallel_slots": 4,
+  "context_tokens_total": 12288
+}

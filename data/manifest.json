@@ -1,0 +1,27 @@
+{
+  "seed": 2718,
+  "source": "https://github.com/PolyAI-LDN/task-specific-datasets/tree/master/banking_data",
+  "source_sha256": {
+    "train": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b",
+    "test": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d"
+  },
+  "sizes": {
+    "train": 96,
+    "validation": 36,
+    "test": 120
+  },
+  "intents": {
+    "A": "card_arrival",
+    "B": "card_delivery_estimate",
+    "C": "card_not_working",
+    "D": "contactless_not_working",
+    "E": "declined_card_payment",
+    "F": "pending_card_payment",
+    "G": "card_payment_not_recognised",
+    "H": "transaction_charged_twice",
+    "I": "cash_withdrawal_not_recognised",
+    "J": "declined_cash_withdrawal",
+    "K": "pending_transfer",
+    "L": "transfer_not_received_by_recipient"
+  }
+}

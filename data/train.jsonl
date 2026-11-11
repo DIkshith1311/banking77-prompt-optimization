@@ -1,0 +1,96 @@
+{"id": "train-5942", "ticket": "my payment was rejected, do you know why?", "code": "E"}
+{"id": "train-4980", "ticket": "My card has been declined by two separate ATM, and I'm worried something is wrong with my account. Would you please see if my account is okay?", "code": "J"}
+{"id": "train-1786", "ticket": "how many days processing new card?", "code": "D"}
+{"id": "train-1794", "ticket": "I can't get a contactless payment to work.", "code": "D"}
+{"id": "train-6062", "ticket": "i transfered and yet it is still pending", "code": "K"}
+{"id": "train-1809", "ticket": "How do I troubleshoot when contactless doesn't work?", "code": "D"}
+{"id": "train-1111", "ticket": "How long does it take for something to be delivered to the U.S?", "code": "B"}
+{"id": "train-2837", "ticket": "What is the time for a transfer?", "code": "L"}
+{"id": "train-8802", "ticket": "What is this witdrawal", "code": "I"}
+{"id": "train-5137", "ticket": "It looks like a payment I've made hasn't made it through yet.", "code": "F"}
+{"id": "train-1006", "ticket": "Can it specifically be delivered on a certain date?", "code": "B"}
+{"id": "train-1077", "ticket": "I ordered my card a couple weeks ago and haven't received it yet. When can I expect it?", "code": "B"}
+{"id": "train-1799", "ticket": "I need help fixing my contactless. It's not working anywhere I go today.", "code": "D"}
+{"id": "train-5890", "ticket": "Why didn't my card payment work?", "code": "E"}
+{"id": "train-2783", "ticket": "Why hasn't my friend received the transaction?", "code": "L"}
+{"id": "train-50", "ticket": "A card has been sent to me, how do I track it?", "code": "A"}
+{"id": "train-1787", "ticket": "I'm confused. My contactless is suddenly not working anywhere that I try to use it. How do I fix it?", "code": "D"}
+{"id": "train-3622", "ticket": "There's a card payment with a name I don't recognize", "code": "G"}
+{"id": "train-5870", "ticket": "My card wasn't working in a shop", "code": "E"}
+{"id": "train-6033", "ticket": "I have not seen any changes in my account balance(s) after making a transfer.", "code": "K"}
+{"id": "train-3625", "ticket": "Someone else accessed my account and made a payment.", "code": "G"}
+{"id": "train-6356", "ticket": "I was charged twice for an in-store purchase that I thought was declined.  My App says that it's still pending for one of the payments. Please make sure one of the charges is removed.", "code": "H"}
+{"id": "train-5838", "ticket": "Do you know why my card payment has been declined?", "code": "E"}
+{"id": "train-6446", "ticket": "I was double-charged for a transaction", "code": "H"}
+{"id": "train-3555", "ticket": "why do I have an unknown payment?", "code": "G"}
+{"id": "train-5876", "ticket": "When I use my card, it says decline?", "code": "E"}
+{"id": "train-2847", "ticket": "I sent some money but the intended recipient says it hasn't arrived", "code": "L"}
+{"id": "train-5011", "ticket": "Why am I not able to get cash from the ATM?", "code": "J"}
+{"id": "train-8891", "ticket": "I see an unauthorized withdraw.", "code": "I"}
+{"id": "train-6010", "ticket": "Tell me why my transfer is pending.", "code": "K"}
+{"id": "train-5153", "ticket": "There is a payment that has not processed.", "code": "F"}
+{"id": "train-6480", "ticket": "Hello. I just noticed I was charged two times for a restaurant I visited this week. Can you reverse the additional charge?", "code": "H"}
+{"id": "train-2788", "ticket": "I have not received the completed transaction.", "code": "L"}
+{"id": "train-2746", "ticket": "What is the length of a transaction completion?", "code": "L"}
+{"id": "train-6349", "ticket": "I have duplicate charges for the same transaction", "code": "H"}
+{"id": "train-1031", "ticket": "Can I choose the day it's delivered?", "code": "B"}
+{"id": "train-8934", "ticket": "Help!  There is a cash withdrawl on the account that I didn't make!", "code": "I"}
+{"id": "train-8935", "ticket": "There is a cash withdrawal on my statement that I don't recognize", "code": "I"}
+{"id": "train-5145", "ticket": "My card payment still pending", "code": "F"}
+{"id": "train-4970", "ticket": "This morning I wanted to make a withdrawal before work, but my card was declined! Please double check it for me as this is the first time it was declined.", "code": "J"}
+{"id": "train-1040", "ticket": "If I order a card when does it arrive?", "code": "B"}
+{"id": "train-6433", "ticket": "Hi. I noticed I have a duplicate charge which I have not made twice. Who should I talk to take care of this?", "code": "H"}
+{"id": "train-1261", "ticket": "My card will not work", "code": "C"}
+{"id": "train-1298", "ticket": "My card doesn't seem to work anymore", "code": "C"}
+{"id": "train-116", "ticket": "How do I track the card you sent to me?", "code": "A"}
+{"id": "train-2787", "ticket": "Why hasn't the money transfer arrived yet?", "code": "L"}
+{"id": "train-3628", "ticket": "Why is there an unknown card payment?", "code": "G"}
+{"id": "train-5991", "ticket": "Transfers can take up to one day to process before departing for the beneficiary accounts. Please confirm that you've entered your account details correctly. SEPA transfers can take up to two working days, while SWIFT transfers can take up to five working days.", "code": "K"}
+{"id": "train-5914", "ticket": "My card was refused", "code": "E"}
+{"id": "train-1101", "ticket": "Will my card be here soon?", "code": "B"}
+{"id": "train-5842", "ticket": "I'm not sure why the card payment didn't work.", "code": "E"}
+{"id": "train-8785", "ticket": "I didn't withdraw the amount of cash that is showing up in the app.", "code": "I"}
+{"id": "train-5038", "ticket": "Why can't I get cash from the ATM?", "code": "J"}
+{"id": "train-1309", "ticket": "My card doesn't seem to work.", "code": "C"}
+{"id": "train-3522", "ticket": "I'm noticing a payment/purchase at a company that I don't recognise.", "code": "G"}
+{"id": "train-6442", "ticket": "Why was I charged twice for the same thing?", "code": "H"}
+{"id": "train-2827", "ticket": "|I moved out of my old house two weeks ago and cancelled my direct debit to my old landlord, this direct debit was working fine.  Now I've moved in to a new place and set up a transfer to a new landlord but it's not reached her yet, can you check it please?", "code": "L"}
+{"id": "train-6073", "ticket": "Money was transferred to me and I am unable to see it", "code": "K"}
+{"id": "train-5186", "ticket": "Why hasn't my payment gone through?", "code": "F"}
+{"id": "train-5903", "ticket": "Why won't you accept my payment? I keep trying with this card and it's not working.", "code": "E"}
+{"id": "train-5184", "ticket": "I did a card payment but its status is still coming as pending. Please check and inform when it would complete.", "code": "F"}
+{"id": "train-1008", "ticket": "When can I expect my card? I live in the US.", "code": "B"}
+{"id": "train-1324", "ticket": "Need help to get my card to work.", "code": "C"}
+{"id": "train-5114", "ticket": "After making a payment with my card it doesn't seem to have worked. It's just showing to be pending. When will this actually be going through?", "code": "F"}
+{"id": "train-5016", "ticket": "Why would the ATM machine fail to give me the cash withdrawal I requested?", "code": "J"}
+{"id": "train-6448", "ticket": "My bill shows the same charge more than once", "code": "H"}
+{"id": "train-8894", "ticket": "My account shows that I made a cash withdrawal but I cannot remember doing so!", "code": "I"}
+{"id": "train-83", "ticket": "Can I track the card that was just sent to me?", "code": "A"}
+{"id": "train-6021", "ticket": "How long is the wait for a money transfer to show up?", "code": "K"}
+{"id": "train-6326", "ticket": "I have a duplicate payment on my card.", "code": "H"}
+{"id": "train-3564", "ticket": "I need to figure out who has access to my card there are some payments I didn't make that are showing on the app.  Could you please help?", "code": "G"}
+{"id": "train-3513", "ticket": "A payment in my account was made by someone I don't know", "code": "G"}
+{"id": "train-1287", "ticket": "Suddenly, my card won't work.", "code": "C"}
+{"id": "train-5094", "ticket": "The purchase I made is still pending.", "code": "F"}
+{"id": "train-106", "ticket": "My card hasn't came in the mail yet?", "code": "A"}
+{"id": "train-5169", "ticket": "Hi,  One of payment is still coming as pending for which i have already paid by card. I guess it did not processed, could you please check and update me.", "code": "F"}
+{"id": "train-1305", "ticket": "What should I do if I can't use my card?", "code": "C"}
+{"id": "train-1789", "ticket": "I've tried using my contactless in several locations today and it's not working anywhere. It seemed fine before. How do I get it to work again?", "code": "D"}
+{"id": "train-1014", "ticket": "How long until my card will get here?", "code": "B"}
+{"id": "train-8902", "ticket": "I have my card here with me and someone has just made a withdrawal for 500. Please help!", "code": "I"}
+{"id": "train-1790", "ticket": "What do I have to do to get the contactless to work?", "code": "D"}
+{"id": "train-31", "ticket": "I would like to track the card you sent to me.", "code": "A"}
+{"id": "train-4925", "ticket": "Why won't cash come out of the ATM?", "code": "J"}
+{"id": "train-1782", "ticket": "Should i uninstall the app before i try it again?", "code": "D"}
+{"id": "train-4955", "ticket": "I went to the Notting Hill ATM to use my card the first time for a cash withdrawal but it didn't work. Does this mean that my card isn't working yet?", "code": "J"}
+{"id": "train-8865", "ticket": "There is a cash withdrawal in my account that isn't mine.", "code": "I"}
+{"id": "train-6061", "ticket": "My transfer hasn't appeared yet", "code": "K"}
+{"id": "train-144", "ticket": "Is a tracking number available for the card that was just sent?", "code": "A"}
+{"id": "train-100", "ticket": "can you share card tracking number?", "code": "A"}
+{"id": "train-2745", "ticket": "My friend says he hasn't received my transaction", "code": "L"}
+{"id": "train-126", "ticket": "How much longer until I get my new card?", "code": "A"}
+{"id": "train-3502", "ticket": "my statement contains an unknown payment", "code": "G"}
+{"id": "train-6004", "ticket": "Hi I am trying to transfer money to another country but it is showing pending and it has been a long time.  I have checked numbers and they are correct.  Could you please help?", "code": "K"}
+{"id": "train-1279", "ticket": "My card won't work at all for anything.", "code": "C"}
+{"id": "train-5027", "ticket": "Why can I not get cash from the ATM?", "code": "J"}
+{"id": "train-1269", "ticket": "What do I do?  My card is broken.", "code": "C"}
