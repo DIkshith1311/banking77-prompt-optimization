@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: Classify this customer-support ticket by its primary banking intent.\n\nExisting codes:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nNew rule:\nIf the ticket contains the phrase 'track the card you sent', classify as **A. card arrival**. Otherwise, classify as the closest matching intent code.",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "textgrad",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "algorithm": "COPRO",
+    "breadth": 3,
+    "depth": 2,
+    "candidates": [
+      {
+        "instruction": "Classify the customer-support ticket based on the primary banking intent using the provided intent codebook (A-J). Use clear distinctions for labels that are frequently confused, such as A (card arrival) and L (transfer not received by recipient), ensuring that their implications are clearly differentiated. Prioritize the output format as a single-letter code from the given list (A-J).",
+        "validation_accuracy_percent": 52.78,
+        "prefix": "Intent",
+        "depth": 1
+      },
+      {
+        "instruction": "Classify the banking intent of the customer-support ticket based on the provided intent codebook (A-J), ensuring clarity between closely related labels such as A (card arrival) and L (transfer not received by recipient), and between card payment issues and cash withdrawal issues, using the following general rules: A, G, I, J for card-related issues; B, F, K for payment-related issues; C, D for contactless issues; H for double charges; E for declined payments; and L for transfer-related issues.",
+        "validation_accuracy_percent": 47.22,
+        "prefix": "Intent",
+        "depth": 1
+      },
+      {
+        "instruction": "Classify this customer-support ticket by its primary banking intent.",
+        "validation_accuracy_percent": 44.44,
+        "prefix": "Intent",
+        "depth": 0
+      },
+      {
+        "instruction": "Classify the banking intent of the customer-support ticket into one of the given categories (A-J) based on the primary issue described, ensuring to differentiate between closely related labels such as A (card arrival) and L (transfer not received by recipient), which may appear similar but have distinct implications.",
+        "validation_accuracy_percent": 38.89,
+        "prefix": "Intent",
+        "depth": 0
+      },
+      {
+        "instruction": "Classify the customer-support ticket based on the primary banking intent using the provided intent codebook (A-J). Ensure to differentiate between closely related labels such as A (card arrival) and J (declined cash withdrawal), and between closely related payment issues like G (card payment not recognised) and D (contactless not working). Use the intent codebook for output.",
+        "validation_accuracy_percent": 36.11,
+        "prefix": "Intent",
+        "depth": 1
+      },
+      {
+        "instruction": "Classify the customer-support ticket based on the primary banking intent, ensuring to clearly differentiate between card payment issues and cash withdrawal issues, as well as transfers and double charges. Use the provided intent codebook (A-J) for output.",
+        "validation_accuracy_percent": 5.56,
+        "prefix": "Intent",
+        "depth": 0
+      }
+    ]
+  }
+]

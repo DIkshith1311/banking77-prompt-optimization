@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify the customer-support ticket based on the primary banking intent using the provided intent codebook (A-J). Use clear distinctions for labels that are frequently confused, such as A (card arrival) and L (transfer not received by recipient), ensuring that their implications are clearly differentiated. Prioritize the output format as a single-letter code from the given list (A-J).",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "dspy_copro",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

@@ -1,0 +1,9 @@
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 224, "output_tokens": 2, "total_tokens": 226, "seconds": 3.0876}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 245, "output_tokens": 2, "total_tokens": 247, "seconds": 0.6378}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 221, "output_tokens": 2, "total_tokens": 223, "seconds": 0.324}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 225, "output_tokens": 2, "total_tokens": 227, "seconds": 0.3728}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 224, "output_tokens": 2, "total_tokens": 226, "seconds": 0.3541}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 208, "output_tokens": 2, "total_tokens": 210, "seconds": 1.0557}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 229, "output_tokens": 2, "total_tokens": 231, "seconds": 1.3855}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 222, "output_tokens": 2, "total_tokens": 224, "seconds": 0.4874}
+{"method": "dspy_bootstrap", "phase": "optimization", "purpose": "classify", "input_tokens": 221, "output_tokens": 2, "total_tokens": 223, "seconds": 0.508}

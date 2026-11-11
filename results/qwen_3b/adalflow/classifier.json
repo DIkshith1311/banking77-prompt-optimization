@@ -1,0 +1,7 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.",
+  "demos": [],
+  "prefix": "Intent",
+  "method": "adalflow",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

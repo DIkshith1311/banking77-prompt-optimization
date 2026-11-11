@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Classify the customer-support ticket based on the primary banking intent using the provided intent codebook (A-J). Use clear distinctions for labels that are frequently confused, such as A (card arrival) and L (transfer not received by recipient), ensuring that their implications are clearly differentiated. Prioritize the output format as a single-letter code from the given list (A-J).\n\nChoose one intent code from this list:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nReturn exactly one capital letter from A to L."
+  },
+  {
+    "role": "user",
+    "content": "Ticket: \nIntent:"
+  }
+]

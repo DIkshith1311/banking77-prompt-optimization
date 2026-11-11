@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Classify this customer-support ticket by its primary banking intent.\n\nChoose one intent code from this list:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nReturn exactly one capital letter from A to L.\n\nExamples:\nTicket: my payment was rejected, do you know why?\nIntent: E\nTicket: I can't get a contactless payment to work.\nIntent: D\nTicket: i transfered and yet it is still pending\nIntent: K\nTicket: How do I troubleshoot when contactless doesn't work?\nIntent: D\nTicket: How long does it take for something to be delivered to the U.S?\nIntent: B\nTicket: What is this witdrawal\nIntent: I"
+  },
+  {
+    "role": "user",
+    "content": "Ticket: \nIntent:"
+  }
+]

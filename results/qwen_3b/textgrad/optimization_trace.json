@@ -1,0 +1,42 @@
+[
+  {
+    "initial_validation": [
+      0.3888888888888889,
+      0.3361111111111111
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: If the customer's query is about tracking a sent card, route to condition A (card arrival).",
+    "validation": [
+      0.3888888888888889,
+      0.3300925925925926
+    ],
+    "accepted": false,
+    "feedback": [
+      "The banking ticket classifier instruction should be refined to include a more comprehensive list of banking intents and provide clear examples for each. This will help the model understand the nuances of customer inquiries and improve its accuracy. Additionally, integrating a feedback loop where the model's predictions are reviewed and adjusted based on user interactions can further enhance its performance.\n\nFor the specific case of \"A card has been sent to me, how do I track it?\", the instruction should specify that option B (card delivery estimate",
+      "To improve the banking ticket classifier instruction, consider refining the criteria for classifying customer-support tickets. Specifically, the instruction should emphasize the importance of accurately understanding the customer's primary banking intent, even if the initial response from the language model does not align with the question. For instance, the instruction could include a section on handling discrepancies between the customer's query and the language model's output, with a focus on ensuring the response is clear, relevant, and correct. Additionally, the instruction"
+    ],
+    "training_ids": [
+      "train-50",
+      "train-1786"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: Classify this customer-support ticket by its primary banking intent.\n\nExisting codes:\nA. card arrival\nB. card delivery estimate\nC. card not working\nD. contactless not working\nE. declined card payment\nF. pending card payment\nG. card payment not recognised\nH. transaction charged twice\nI. cash withdrawal not recognised\nJ. declined cash withdrawal\nK. pending transfer\nL. transfer not received by recipient\n\nNew rule:\nIf the ticket contains the phrase 'track the card you sent', classify as **A. card arrival**. Otherwise, classify as the closest matching intent code.",
+    "validation": [
+      0.3888888888888889,
+      0.36663614163614167
+    ],
+    "accepted": true,
+    "feedback": [
+      "The current instruction is too broad and lacks specificity. To improve the classification, the instruction should be more detailed and include specific intents or keywords that the classifier should look for in customer support tickets. For example, including phrases related to payment issues, account inquiries, or service requests could help the classifier more accurately identify the primary banking intent. Additionally, providing examples of tickets for each intent could further refine the classifier's understanding and improve its performance.",
+      "To improve the banking ticket classifier instruction, consider adding a detailed codebook that clearly defines each option, including examples of typical customer inquiries. This will help users understand the intent behind each option and reduce ambiguity. Additionally, incorporating a more nuanced understanding of customer intent through machine learning models can further refine the classification accuracy.\n\nFor the specific text, the instruction could be revised to include a detailed explanation of each option, such as: \"Option A: Tracking the arrival of the card you sent"
+    ],
+    "training_ids": [
+      "train-116",
+      "train-5890"
+    ]
+  }
+]

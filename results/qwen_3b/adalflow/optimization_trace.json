@@ -1,0 +1,44 @@
+[
+  {
+    "initial_validation": [
+      0.4444444444444444,
+      0.3847222222222222
+    ]
+  },
+  {
+    "round": 1,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+    "validation": [
+      0.4444444444444444,
+      0.36041666666666666
+    ],
+    "accepted": false,
+    "feedback": "0. One concrete improvement to the Banking77 intent instruction is to specify that the feedback should be directed at the predecessor variable, as the error might not be directly related to the target variable itself. For instance, the feedback should be given to the \"instruction\" variable, suggesting that it should output the correct intent code \"A\" instead of \"B\", which is\n1. One concrete improvement could be to specifically investigate if the inconsistency in the output is due to the input variable's handling of the customer-support ticket classification. Given that the target variable is used together with the predecessor variables, it's important to ensure that the input variable is correctly mapping the customer-support ticket to the appropriate banking intent code.\n",
+    "candidate_rules": {
+      "1": "For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+      "2": "For tickets about contactless not working, choose D. Distinguish this from card delivery estimate (B)."
+    },
+    "training_ids": [
+      "train-50",
+      "train-1786"
+    ]
+  },
+  {
+    "round": 2,
+    "proposal": "Classify this customer-support ticket by its primary banking intent.\nDecision guidance: For tickets about declined card payment, choose E. Distinguish this from card payment not recognised (G).",
+    "validation": [
+      0.4166666666666667,
+      0.3755952380952381
+    ],
+    "accepted": false,
+    "feedback": "0. One concrete improvement could be to specify that the feedback should also consider how the variable interacts with its peers, as the target variable is used together with other predecessors. Investigate if the interaction between the target variable and its peers is causing the mismatch in the output, and adjust the inputs or outputs accordingly.\n1. One concrete improvement to the instruction is to specify that the feedback should also consider the interaction between the predecessor variables, as the system error might be influenced by how the card payment issue interacts with other components or inputs. For instance, the card not working (C) might be exacerbated by a declined card payment (E). This could help in identifying if any of the\n",
+    "candidate_rules": {
+      "1": "For tickets about card arrival, choose A. Distinguish this from card delivery estimate (B).",
+      "2": "For tickets about declined card payment, choose E. Distinguish this from card payment not recognised (G)."
+    },
+    "training_ids": [
+      "train-116",
+      "train-5890"
+    ]
+  }
+]

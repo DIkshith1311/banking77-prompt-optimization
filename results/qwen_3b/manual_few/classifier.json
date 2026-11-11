@@ -1,0 +1,32 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.",
+  "demos": [
+    [
+      "How many business days should my replacement card take to arrive?",
+      "B"
+    ],
+    [
+      "My plastic card has still not turned up after three weeks.",
+      "A"
+    ],
+    [
+      "Tapping my card at the reader no longer works, but inserting it does.",
+      "D"
+    ],
+    [
+      "There is an unfamiliar debit-card purchase on my statement.",
+      "G"
+    ],
+    [
+      "The ATM said my attempt to take out cash was declined.",
+      "J"
+    ],
+    [
+      "The transfer shows complete, but my landlord never got the money.",
+      "L"
+    ]
+  ],
+  "prefix": "Intent",
+  "method": "manual_few",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}

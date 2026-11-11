@@ -1,0 +1,32 @@
+{
+  "instruction": "Classify this customer-support ticket by its primary banking intent.",
+  "demos": [
+    [
+      "my payment was rejected, do you know why?",
+      "E"
+    ],
+    [
+      "I can't get a contactless payment to work.",
+      "D"
+    ],
+    [
+      "i transfered and yet it is still pending",
+      "K"
+    ],
+    [
+      "How do I troubleshoot when contactless doesn't work?",
+      "D"
+    ],
+    [
+      "How long does it take for something to be delivered to the U.S?",
+      "B"
+    ],
+    [
+      "What is this witdrawal",
+      "I"
+    ]
+  ],
+  "prefix": "Intent",
+  "method": "dspy_bootstrap",
+  "model": "qwen2.5-3b-instruct-q4_k_m"
+}
