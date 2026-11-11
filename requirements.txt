@@ -1,0 +1,6 @@
+dspy==3.0.4
+textgrad==0.1.8
+adalflow==1.0.4
+litellm==1.108.3
+requests==2.34.2
+matplotlib==3.11.2

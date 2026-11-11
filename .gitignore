@@ -1,0 +1,28 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.dspy_cache/
+.adalflow_cache/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Local model weights and inference runtime
+*.gguf
+*.gguf.part
+/llama/
+
+# Local benchmark reruns and logs
+/rerun/
+/rerun-*/
+/rerun_*/
+/RERUN_REPORT.md
+/RERUN_REPORT - Accuracy vs Optimization Cost.png
+*.log
