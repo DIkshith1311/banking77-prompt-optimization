@@ -38,6 +38,27 @@ Run a saved classifier from a second terminal.
 
 Methods are `manual_zero`, `manual_few`, `dspy_bootstrap`, `dspy_copro`, `textgrad`, and `adalflow`. Inference uses the saved classifier specification and the same renderer used for scoring. The output includes the intent, raw response, and input token count. An invalid code produces a null intent.
 
+## Web UI
+
+A local dashboard shows the whole comparison and runs all six classifiers live, side by side. It needs only `requests` and any OpenAI-compatible server hosting the model: the llama.cpp server above, or [Ollama](https://ollama.com) (`ollama pull qwen2.5:3b`, then `ollama cp qwen2.5:3b qwen2.5-3b-instruct-q4_k_m`; it is the same GGUF and checksum).
+
+```powershell
+.\.venv\Scripts\python.exe .\ui\server.py --url http://127.0.0.1:11434/v1   # Ollama
+.\.venv\Scripts\python.exe .\ui\server.py --url http://127.0.0.1:18976/v1   # llama.cpp server
+```
+
+Open http://127.0.0.1:8077. The page has five parts:
+
+- **Live arena**: type a ticket, or pick a test ticket, and watch all six prompts answer at once, with the correct label when the ticket comes from the test set. `?q=<ticket>` in the URL classifies on load.
+- **Leaderboard**: strict and lenient accuracy, and accuracy against optimization tokens.
+- **Where each method struggles**: per-intent F1 and a confusion matrix per method.
+- **Inside the optimizers**: each final instruction (additions to the original prompt are highlighted), the chosen demonstrations, and the rounds or candidates each optimizer tried.
+- **Ticket explorer**: every test ticket with each method's answer, filterable to disagreements.
+
+The run selector switches between the published results and any local reruns in `rerun_saved/` (saved prompts re-tested) or `rerun_refit/` (fitted again). The server binds to 127.0.0.1 only.
+
+Run the offline tests with `python -m unittest discover -s tests`.
+
 ## Reproduce the comparison
 
 ```powershell
