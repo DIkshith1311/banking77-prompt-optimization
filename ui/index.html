@@ -186,6 +186,12 @@ table.rep td.best::after { content: " ★"; color: var(--hand); font-size: 11px;
 .subhead { font: 400 26px/1.15 var(--serif); margin: 34px 0 4px; }
 .subnote { margin: 0 0 14px; font-size: 14.5px; color: var(--muted); }
 
+.hb { display: grid; grid-template-columns: 130px 1fr 70px; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.hb-name { font: 600 19px/1.1 var(--serif); }
+.hb-track { height: 12px; background: var(--panel-2); border-radius: 3px; overflow: hidden; }
+.hb-track i { display: block; height: 100%; border-radius: 3px; min-width: 2px; }
+.hb-val { text-align: right; font-size: 15px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
 /* 05 errors */
 .err-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 36px; }
 .err-grid > * { min-width: 0; }
@@ -394,22 +400,14 @@ table.ex tr:hover td { background: var(--panel); }
           <li><b>Prompt tokens</b>: prompt length. Shorter is cheaper to run.</li>
           <li><b>LLM calls, tokens</b>: work the optimizer did to find the prompt.</li>
         </ul>
-        <h4>Try these</h4>
-        <div class="try">
-          <button class="chip" data-mode="lenient">Switch to Lenient<small>Counts “B.” as B. Watch TextGrad jump.</small></button>
-          <button class="chip" data-mode="strict">Back to Strict<small>Only a single letter counts.</small></button>
-        </div>
         <div class="takeaway" id="repTake"></div>
       </div>
       <div>
-        <div class="toolbar">
-          <div class="seg" id="modeSeg"><button data-m="strict" class="on">Strict</button><button data-m="lenient">Lenient</button></div>
-          <span class="note" id="runNote"></span>
-        </div>
         <div class="tbl-wrap"><table class="rep" id="rep"></table></div>
+        <p class="note" style="margin-top:10px">★ best in column</p>
         <div class="charts">
-          <div><h3>Accuracy vs optimizer cost</h3><p>Hover a dot for details.</p><div class="chart" id="scatter"></div></div>
-          <div><h3>Accuracy vs prompt length</h3><p>Tokens in the prompt before the message is added.</p><div class="chart" id="lenChart"></div></div>
+          <div><h3>Extra work to build the prompt</h3><p>Tokens the optimizer used while searching. Hand-written prompts used none.</p><div id="costBars"></div></div>
+          <div><h3>Prompt length</h3><p>Tokens sent with every message. Shorter is cheaper to run.</p><div id="lenBars"></div></div>
         </div>
       </div>
     </div>
@@ -609,10 +607,8 @@ async function boot() {
   $("#go").onclick = classify;
   $("#ticket").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); classify(); } });
   $("#ticket").addEventListener("input", () => { lastOut = null; if (gold !== null || !$("#goldPick")) customGold(); });
-  $("#modeSeg").onclick = e => { const b = e.target.closest("button"); if (b) setMode(b.dataset.m); };
   $("#fSeg").onclick = e => { const b = e.target.closest("button"); if (b) setFilter(b.dataset.f); };
   $("#q").oninput = renderExplorer;
-  document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => setMode(b.dataset.mode));
   document.querySelectorAll("[data-sel]").forEach(b => b.onclick = () => { selMethod = b.dataset.sel; renderErrors(); });
   document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => setTab(b.dataset.tab));
   document.querySelectorAll("[data-filter]").forEach(b => b.onclick = () => { $("#q").value = ""; setFilter(b.dataset.filter); });
@@ -628,7 +624,6 @@ function status(h) {
   const ok = h.ok && h.model_available !== false;
   $("#status").innerHTML = `<i class="${ok ? "ok" : "bad"}"></i><span>${ok ? "Model online" : "Model offline"}</span>`;
 }
-function setMode(m) { mode = m; document.querySelectorAll("#modeSeg button").forEach(x => x.classList.toggle("on", x.dataset.m === m)); renderNumbers(); renderErrors(); renderExplorer(); }
 function setFilter(f) { filter = f; document.querySelectorAll("#fSeg button").forEach(x => x.classList.toggle("on", x.dataset.f === f)); renderExplorer(); }
 async function loadRun(id) {
   RUN = await (await fetch("/api/run?id=" + id)).json();
@@ -730,51 +725,32 @@ function renderBars() {
 
 /* 04 */
 function renderNumbers() {
-  const rows = IDS.map(m => {
+  const a = m => RUN.methods[m].metrics.accuracy;
+  const rows = IDS.slice().sort((x, y) => a(y) - a(x)).map(m => {
     const d = RUN.methods[m];
-    return { m, acc: acc(m), f1: f1(m), len: d.metrics.prompt_tokens_static, calls: d.optimization.calls, tok: d.optimization.tokens, inv: d.metrics.invalid, src: d.optimization.source };
+    return { m, acc: d.metrics.accuracy, f1: d.metrics.macro_f1, len: d.metrics.prompt_tokens_static, calls: d.optimization.calls, tok: d.optimization.tokens };
   });
   const bestAcc = Math.max(...rows.map(r => r.acc)), bestF1 = Math.max(...rows.map(r => r.f1)), minLen = Math.min(...rows.map(r => r.len));
-  $("#rep").innerHTML = `<tr><th>Prompt</th><th>Accuracy</th><th>Macro F1</th><th>Prompt<br>tokens</th><th>Optimizer<br>LLM calls</th><th>Optimizer<br>tokens</th><th>Bad-format<br>replies</th></tr>` +
+  $("#rep").innerHTML = `<tr><th>Prompt</th><th>Accuracy</th><th>Macro F1</th><th>Prompt length<br>(tokens)</th><th>Optimizer<br>LLM calls</th><th>Optimizer<br>tokens</th></tr>` +
     rows.map(r => `<tr>
       <td class="m">${NAME[r.m]}<small>${KIND[r.m]}</small></td>
       <td class="${r.acc === bestAcc ? "best" : ""}">${pct1(r.acc)}</td>
       <td class="${r.f1 === bestF1 ? "best" : ""}">${r.f1.toFixed(3)}</td>
       <td class="${r.len === minLen ? "best" : ""}">${r.len}</td>
       <td>${r.calls.toLocaleString()}</td>
-      <td>${r.tok.toLocaleString()}</td>
-      <td>${r.inv} of 120</td></tr>`).join("");
-  const borrowed = rows.some(r => r.src !== "this run" && r.calls);
-  $("#runNote").textContent = `★ best in column · ${mode === "strict" ? "Strict scoring" : "Lenient scoring"}${borrowed ? " · cost from the published fit" : ""}`;
-  const cheap = rows.filter(r => KIND[r.m] === "Optimizer").sort((x, y) => y.tok - x.tok)[0];
-  $("#repTake").textContent = `${NAME[cheap.m]} spent the most (${compact(cheap.tok)} tokens, ${cheap.calls} calls) and still scored ${pct(cheap.acc)}.`;
-  axisChart($("#scatter"), rows, "tok", "optimizer tokens", compact);
-  axisChart($("#lenChart"), rows, "len", "prompt tokens", v => String(Math.round(v)));
+      <td>${r.tok.toLocaleString()}</td></tr>`).join("");
+  const top = rows.filter(r => KIND[r.m] === "Optimizer").sort((x, y) => y.tok - x.tok)[0];
+  $("#repTake").textContent = `${NAME[top.m]} used the most (${compact(top.tok)} tokens, ${top.calls} calls) and still scored below the hand-written few-shot prompt.`;
+  hbars($("#costBars"), rows, "tok", v => v ? v.toLocaleString() : "0");
+  hbars($("#lenBars"), rows, "len", v => String(v));
 }
-function axisChart(el, rows, xKey, xLabel, xFmt) {
-  const W = 520, H = 300, L = 46, R = 26, T = 14, B = 44;
-  const xs = rows.map(r => r[xKey]), vs = rows.map(r => r.acc);
-  const xMax0 = Math.max(...xs, 1), mag = Math.pow(10, Math.floor(Math.log10(xMax0)));
-  const step = [1, 2, 5, 10].map(k => k * mag / 2).find(s => xMax0 / s <= 5) || mag;
-  const xMin = xKey === "len" ? Math.floor(Math.min(...xs) * 0.8 / step) * step : 0;
-  const xMax = Math.ceil(xMax0 * 1.06 / step) * step;
-  const yMin = Math.max(0, Math.floor((Math.min(...vs) - .05) * 10) / 10), yMax = Math.min(1, Math.ceil((Math.max(...vs) + .04) * 10) / 10);
-  const x = v => L + (v - xMin) / (xMax - xMin) * (W - L - R), y = v => T + (1 - (v - yMin) / (yMax - yMin)) * (H - T - B);
-  let s = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
-  for (let v = yMin; v <= yMax + 1e-9; v += .1) s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${Math.round(v * 100)}%</text>`;
-  for (let t = xMin; t <= xMax + 1e-9; t += step) s += `<text x="${x(t)}" y="${H - B + 20}" text-anchor="middle">${xFmt(t)}</text>`;
-  s += `<line x1="${L}" x2="${W - R}" y1="${H - B}" y2="${H - B}" stroke="var(--line-2)"/><text x="${(L + W - R) / 2}" y="${H - 4}" text-anchor="middle">${xLabel}</text>`;
-  const placed = [];
-  rows.slice().sort((a, b) => b.acc - a.acc).forEach(r => {
-    const cx = x(r[xKey]), cy = y(r.acc), right = cx > W - 170;
-    let ly = cy + 5;
-    while (placed.some(p => Math.abs(p.y - ly) < 17 && Math.abs(p.x - cx) < 150)) ly += 17;
-    placed.push({ x: cx, y: ly });
-    const t = `<b>${NAME[r.m]}</b><br>${pct1(r.acc)} accuracy<br>${r.len} prompt tokens<br>${r.calls} optimizer calls · ${compact(r.tok)} tokens`;
-    s += `<g data-tip="${esc(t)}"><circle cx="${cx}" cy="${cy}" r="14" fill="transparent"/><circle cx="${cx}" cy="${cy}" r="6" fill="${COL(r.m)}" stroke="var(--bg)" stroke-width="2"/>
-      <text class="tn" x="${right ? cx - 12 : cx + 12}" y="${ly}" text-anchor="${right ? "end" : "start"}">${NAME[r.m]}</text></g>`;
-  });
-  el.innerHTML = s + "</svg>"; bindTips(el);
+function hbars(el, rows, key, fmt) {
+  const max = Math.max(...rows.map(r => r[key]), 1);
+  el.innerHTML = rows.map(r => `<div class="hb" data-tip="${esc(`<b>${NAME[r.m]}</b><br>${fmt(r[key])} tokens`)}">
+      <span class="hb-name">${NAME[r.m]}</span>
+      <span class="hb-track"><i style="width:${(r[key] / max * 100).toFixed(1)}%;background:${COL(r.m)}"></i></span>
+      <span class="hb-val">${fmt(r[key])}</span></div>`).join("");
+  bindTips(el);
 }
 
 /* 05 */
