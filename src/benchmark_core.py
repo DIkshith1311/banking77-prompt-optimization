@@ -120,6 +120,19 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def openai_schema_format(response_format):
+    """Express a schema-carrying json_object request in the OpenAI json_schema form.
+
+    llama.cpp's server enforces either form, but Ollama ignores a schema nested in
+    json_object and only constrains output given the json_schema form. llama-cpp-python
+    (the --gguf path) takes the original form, so this is applied to HTTP servers only.
+    """
+    if response_format.get("type") == "json_object" and "schema" in response_format:
+        return {"type": "json_schema",
+                "json_schema": {"name": "response", "strict": True, "schema": response_format["schema"]}}
+    return response_format
+
+
 class Backend:
     """All generation, including optimizer feedback, passes through one meter."""
 
@@ -141,6 +154,8 @@ class Backend:
         if response_format:
             body["response_format"] = response_format
         if self.local_model is None:
+            if response_format:
+                body["response_format"] = openai_schema_format(response_format)
             response = requests.post(f"{self.url}/chat/completions", json=body, timeout=240)
             response.raise_for_status()
             data = response.json()
