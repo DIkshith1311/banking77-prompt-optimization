@@ -128,7 +128,8 @@ b, strong { font-weight: 600; color: var(--ink); }
 .chips button { background: var(--panel); border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 14px; cursor: pointer; font-size: 14.5px; color: var(--ink-2); max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: border-color .2s, color .2s; }
 .chips button:hover { border-color: var(--hand); color: var(--ink); }
 .chips button.rand { color: var(--bg); background: var(--hand); border-color: var(--hand); font-weight: 600; }
-.gold { min-height: 26px; margin: 12px 0 0; color: var(--ink-2); font-size: 15px; }
+.gold { min-height: 26px; margin: 12px 0 0; color: var(--ink-2); font-size: 15px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.gold-pick { background: var(--panel); border: 1px solid var(--hand); border-radius: 6px; padding: 6px 10px; font-size: 15px; color: var(--ink); cursor: pointer; }
 .rows { margin-top: 18px; border-top: 1px solid var(--line-2); }
 .row { display: grid; grid-template-columns: 1.1fr 0.7fr 48px 1.5fr 110px; gap: 16px; align-items: center; padding: 14px 4px; border-bottom: 1px solid var(--line); }
 .row .name { font: 600 27px/1.1 var(--serif); }
@@ -336,7 +337,7 @@ table.ex tr:hover td { background: var(--panel); }
         <h4>How to read it</h4>
         <ul>
           <li>The letter is the category it picked.</li>
-          <li><b>Correct / Wrong</b> appears for real test messages, since we know their true answer.</li>
+          <li><b>Correct / Wrong</b> appears for real test messages. For your own message, choose the right answer in the box that appears.</li>
           <li><b>Bad format</b> means the model replied with more than one letter.</li>
         </ul>
         <h4>Tip</h4>
@@ -601,14 +602,14 @@ async function boot() {
     const b = e.target.closest("button"); if (!b) return;
     if (b.dataset.rand) { useSample(META.samples[Math.floor(Math.random() * META.samples.length)]); classify(); return; }
     const s = META.samples.find(x => x.ticket === b.dataset.t);
-    if (s) useSample(s); else { $("#ticket").value = b.dataset.t; gold = null; $("#gold").textContent = "Your own message: there is no known right answer."; }
+    if (s) useSample(s); else { $("#ticket").value = b.dataset.t; customGold(); }
     classify();
   };
   useSample(META.samples.find(x => x.ticket === "When will the card arrive?") || META.samples[0]);
   renderRows(); buildPTabs();
   $("#go").onclick = classify;
   $("#ticket").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); classify(); } });
-  $("#ticket").addEventListener("input", () => { gold = null; $("#gold").textContent = ""; });
+  $("#ticket").addEventListener("input", () => { lastOut = null; if (gold !== null || !$("#goldPick")) customGold(); });
   $("#modeSeg").onclick = e => { const b = e.target.closest("button"); if (b) setMode(b.dataset.m); };
   $("#fSeg").onclick = e => { const b = e.target.closest("button"); if (b) setFilter(b.dataset.f); };
   $("#q").oninput = renderExplorer;
@@ -621,7 +622,7 @@ async function boot() {
   const h = parseInt(location.hash.slice(1), 10);
   go(Number.isFinite(h) ? h - 1 : 0, false);
   const q = new URLSearchParams(location.search).get("q");
-  if (q) { const hit = META.samples.find(x => x.ticket === q); if (hit) useSample(hit); else $("#ticket").value = q; go(1); classify(); }
+  if (q) { const hit = META.samples.find(x => x.ticket === q); if (hit) useSample(hit); else { $("#ticket").value = q; customGold(); } go(1); classify(); }
   setInterval(async () => { try { status(await (await fetch("/api/health")).json()); } catch (e) {} }, 20000);
 }
 function status(h) {
@@ -659,7 +660,16 @@ function renderRows() {
       <span class="letter">·</span><span class="intent">waiting</span><span class="verdict"></span>
     </div>`).join("");
 }
-function useSample(s) { $("#ticket").value = s.ticket; gold = s.code; $("#gold").innerHTML = `Real test message · right answer: <b>${s.code} · ${nice(META.intents[s.code])}</b>`; }
+function useSample(s) { $("#ticket").value = s.ticket; gold = s.code; $("#gold").innerHTML = `<span>Real test message · right answer: <b>${s.code} · ${nice(META.intents[s.code])}</b></span>`; }
+let lastOut = null;
+function customGold() {
+  gold = null;
+  $("#gold").innerHTML = `<span>Your own message. What is the right answer?</span><select id="goldPick" class="gold-pick"><option value="">Choose a category…</option>${Object.entries(META.intents).map(([c, n]) => `<option value="${c}">${c} · ${nice(n)}</option>`).join("")}</select>`;
+  $("#goldPick").onchange = e => {
+    gold = e.target.value || null;
+    if (lastOut && $("#ticket").value.trim()) { IDS.forEach(m => lastOut[m] && paint(m, lastOut[m])); summary(lastOut); }
+  };
+}
 let runId = 0;
 async function classify() {
   const ticket = $("#ticket").value.trim(); if (!ticket) return;
@@ -681,7 +691,7 @@ async function classify() {
     out[m] = res; paint(m, res);
   }));
   if (my !== runId) return;
-  $("#go").disabled = false; summary(out);
+  $("#go").disabled = false; lastOut = out; summary(out);
 }
 function paint(m, r) {
   const row = $("#r-" + m); row.className = "row done";
