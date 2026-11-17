@@ -288,7 +288,6 @@ table.ex tr:hover td { background: var(--panel); }
   <div class="brand">Banking<i>77</i></div>
   <nav class="tabs" id="tabs"></nav>
   <div class="top-right">
-    <select id="runSel" aria-label="Which result set to show"></select>
     <span class="status" id="status"><i></i><span>Checking</span></span>
   </div>
 </header>
@@ -596,10 +595,6 @@ addEventListener("resize", () => { $("#track").style.transition = "none"; go(pag
 async function boot() {
   META = await (await fetch("/api/meta")).json();
   status(META.health);
-  const sel = $("#runSel");
-  sel.innerHTML = META.runs.map(r => `<option value="${r.id}">${esc(r.label)}</option>`).join("");
-  sel.value = META.runs.some(r => r.id === "qwen_3b") ? "qwen_3b" : META.runs[0].id;
-  sel.onchange = () => loadRun(sel.value);
   $("#cats").innerHTML = Object.entries(META.intents).map(([c, n]) => `<span><b>${c}</b>${nice(n)}</span>`).join("");
   $("#tryChips").innerHTML = `<button class="rand" data-rand="1">↻ Random test message</button>` + TRY.map(([t, d]) => `<button data-t="${esc(t)}" title="${esc(d)}">${esc(t)}</button>`).join("");
   $("#tryChips").onclick = e => {
@@ -622,7 +617,7 @@ async function boot() {
   document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => setTab(b.dataset.tab));
   document.querySelectorAll("[data-filter]").forEach(b => b.onclick = () => { $("#q").value = ""; setFilter(b.dataset.filter); });
   document.querySelectorAll("[data-search]").forEach(b => b.onclick = () => { $("#q").value = b.dataset.search; setFilter("all"); });
-  await loadRun(sel.value);
+  await loadRun("qwen_3b");
   const h = parseInt(location.hash.slice(1), 10);
   go(Number.isFinite(h) ? h - 1 : 0, false);
   const q = new URLSearchParams(location.search).get("q");

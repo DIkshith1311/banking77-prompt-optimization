@@ -55,7 +55,7 @@ Open http://127.0.0.1:8077. The page has five parts:
 - **Inside the optimizers**: each final instruction (additions to the original prompt are highlighted), the chosen demonstrations, and the rounds or candidates each optimizer tried.
 - **Ticket explorer**: every test ticket with each method's answer, filterable to disagreements.
 
-The run selector switches between the published results and any local reruns in `rerun_saved/` (saved prompts re-tested) or `rerun_refit/` (fitted again). The server binds to 127.0.0.1 only.
+The page shows the published 3B results in `results/qwen_3b/`. The server binds to 127.0.0.1 only.
 
 Run the offline tests with `python -m unittest discover -s tests`.
 
