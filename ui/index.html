@@ -345,7 +345,7 @@ table.ex tr:hover td { background: var(--panel); }
       </div>
       <div>
         <div class="ask">
-          <textarea id="ticket" rows="2" aria-label="Customer message">I made this payment days ago so why hasn't it gone through yet?</textarea>
+          <textarea id="ticket" rows="2" aria-label="Customer message">When will the card arrive?</textarea>
           <button class="btn" id="go">Classify →</button>
         </div>
         <div class="chips" id="tryChips"></div>
@@ -536,7 +536,7 @@ const HOW = Object.fromEntries(METHODS.map(m => [m[0], m[3]]));
 const IDS = METHODS.map(m => m[0]);
 const COL = m => KIND[m] === "Optimizer" ? "var(--opt)" : "var(--hand)";
 const TRY = [
-  ["Please help me to know the status of my card payment as its pending since a while.", "Real test message. Prompts disagree."],
+  ["When will the card arrive?", "Real test message. Most prompts get this wrong."],
   ["I got double charged for a payment so how do I fix that?", "Real test message. Easy: all six agree."],
   ["I made this payment days ago so why hasn't it gone through yet?", "Real test message. Prompts disagree."],
   ["The ATM ate my card and didn't give me any cash", "Your own wording. No right answer shown."],
@@ -605,7 +605,7 @@ async function boot() {
     if (s) useSample(s); else { $("#ticket").value = b.dataset.t; customGold(); }
     classify();
   };
-  useSample(META.samples.find(x => x.ticket === "I made this payment days ago so why hasn't it gone through yet?") || META.samples[0]);
+  useSample(META.samples.find(x => x.ticket === "When will the card arrive?") || META.samples[0]);
   renderRows(); buildPTabs();
   $("#go").onclick = classify;
   $("#ticket").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); classify(); } });
